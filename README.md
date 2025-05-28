@@ -1,0 +1,1 @@
+Repository ini adalah sebuah soal lks Provinsi Kalimantan Selatan Tahun 2025 
