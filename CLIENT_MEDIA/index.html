@@ -8,7 +8,75 @@
 </head>
 <body>
     
+    <div class="container">
+        <div class="welcome">
+            <img src="Images/logo.png" alt="Logo Bomskuy" class="logo">
+            <input type="text" name="name" id="input" placeholder="Input Username" required>
 
+            <select name="level" id="level" required>
+                <option value="" disabled selected>Select Level</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <div class="choices">
+                <button class="play" onclick="play()" id="playButton" disabled>
+                    PlayGame
+                </button>
+                <button class="instruction" id="instructionButton" onclick="showInstruction()">
+                    Instruction
+                </button>
+            </div>
+
+            <div class="show-error hide" id="error-message" role="alert">
+                <small style="color:red;">Fill all the form before playing the game!</small>
+            </div>
+        </div>
+
+
+        <div class="intructionBoard hide">
+            <div class="text-plain">
+                <h2 id="intructionTitle">How to play game</h2>
+                <p>1. Input Username</p>
+                <p>2. Put the bomb</p>
+                <p>3. Blow up as many walls as possible</p>
+                <p>4. Blow up enemies</p>
+                <p>5. Enjoy!</p>
+            </div>
+            <div 
+                class="close"
+                onclick="document.querySelector('.intructionBoard').classList.add('hide');"
+            >
+                ❌
+            </div>
+        </div>
+    </div>
+
+    <div class="countdown-overlay hide" id="countdown">
+        <h1 id="countdown-number">3</h1>
+    </div>
+
+    <div class="game hide">
+        <div class="board" id="game-board"></div>
+        <div class="sidebar">
+                <img src="Images/logo_white.png" alt="">
+                <p><strong>Player</strong> : <span id="player-name">-</span></p>
+                <p><strong>Time</strong> : <span id="timer">00:00</span></p>
+                <div class="hearts" id="hearts">
+                    ❤️❤️❤️
+                </div>
+                <p><img src="Images/wall.png" width="20"> = <span id="score-wall">0</span></p>
+                <p><img src="Images/wall_crack.png" width="20"> = <span id="score-wall-crack">0</span></p>
+                <p><img src="Images/ice.png" width="20"> = <span id="score-ice">0</span></p>
+        </div>
+
+      
+
+
+    </div>
+    
+    
     <script src="vanilla.js"></script>
 </body>
 </html>
